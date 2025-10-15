@@ -10,282 +10,32 @@ Idea de la Aplicación Web
 
 IsaacFilm es una plataforma de streaming de películas y series inspirada en Netflix, con un enfoque en contenido independiente y películas de culto.
 
-Problema que resuelve:
 
-· Centraliza películas independientes y de culto que no están disponibles en plataformas mainstream
-
-· Ofrece recomendaciones personalizadas basadas en gustos cinematográficos específicos
-
-· Proporciona una experiencia de usuario similar a Netflix, pero para nichos de contenido específicos
-
-· Permite a usuarios descubrir nuevo contenido basado en sus preferencias
-
-Requerimientos Funcionales
-
-Gestión de Usuarios
-
-· Registro y autenticación de usuarios
-
-· Perfiles de usuario personalizables
-
-· Sistema de favoritos y listas personalizadas
-
-Contenido
-
-· Catálogo de películas y series organizado por categorías
-
-· Reproductor de video integrado
-
-· Sistema de búsqueda y filtrado avanzado
-
-Personalización
-
-· Recomendaciones basadas en historial de visualización
-
-· Calificación y reseñas de contenido
-
-· Sistema de notificaciones de nuevos lanzamientos
-
-Administración
-
-· Panel de administración para gestión de contenido
-
-· Estadísticas de uso y visualizaciones
-
-· Gestión de usuarios y permisos
-
-Requerimientos No Funcionales
-
-Rendimiento
-
-· Tiempo de carga inferior a 3 segundos para la página principal
-
-· Streaming de video sin buffering en conexiones de 10Mbps
-
-Seguridad
-
-· Autenticación segura con encriptación de contraseñas
-
-· Protección contra ataques XSS y SQL injection
-
-Usabilidad
-
-· Interfaz intuitiva con curva de aprendizaje menor a 5 minutos
-
-· Diseño responsive compatible con dispositivos móviles y tablets
-
-Escalabilidad
-
-· Arquitectura capaz de soportar hasta 10,000 usuarios concurrentes
-
-· Base de datos optimizada para grandes volúmenes de contenido
-
-Disponibilidad
-
-· Tiempo de actividad del 99.9% (uptime)
-
-· Sistema de backup y recuperación ante desastres
-
-Estructura Básica de la Aplicación
-
-Frontend (Cliente)
-
-· Login/Registro: Autenticación de usuarios
-
-· Página Principal: Catálogo con recomendaciones
-
-· Página de Detalles: Información de películas/series
-
-· Reproductor: Visualización de contenido
-
-· Perfil de Usuario: Gestión de preferencias y listas
-
-Backend (Servidor)
-
-· API REST: Comunicación entre frontend y backend
-
-· Base de Datos: Almacenamiento de usuarios, contenido y preferencias
-
-· Servidor de Streaming: Entrega optimizada de video
-
-· Sistema de Recomendación: Algoritmos de sugerencia de contenido
-
-Manifiesto Ágil - 12 Principios
-
-1. Satisfacción del cliente
-
-Entregar software valioso de forma temprana y continua
-
-2. Aceptar el cambio
-
-Reaccionar ante cambios competitivos incluso en etapas tardías
-
-3. Entregar con frecuencia
-
-Desde un par de semanas hasta un par de meses
-
-4. Colaboración
-
-Negocios y desarrolladores trabajando juntos
-
-5. Motivación
-
-Proyectos construidos alrededor de individuos motivados
-
-6. Comunicación cara a cara
-
-Forma más eficiente de transmitir información
-
-7. Software funcionando
-
-Principal medida de progreso
-
-8. Desarrollo sostenible
-
-Ritmo constante indefinidamente
-
-9. Excelencia técnica
-
-Atención continua a la calidad y buen diseño
-
-10. Simplicidad
-
-Maximizar la cantidad de trabajo no realizado
-
-11. Auto organización
-
-Equipos que se auto-organizan producen mejores diseños
-
-12. Reflexión y ajuste
-
-Ajustar comportamiento a intervalos regulares
-
-Metodología Ágil - Scrum
-
-Características principales:
-
-· Sprints: Iteraciones de tiempo fijo (2-4 semanas)
-
-· Roles: Product Owner, Scrum Master, Equipo de Desarrollo
-
-· Artefactos: Product Backlog, Sprint Backlog, Incremento
-
-· Eventos: Sprint Planning, Daily Stand-up, Sprint Review, Retrospectiva
-
-Aplicación en IsaacFilm:
-
-· Sprint 1: Autenticación y estructura básica
-
-· Sprint 2: Catálogo y sistema de búsqueda
-
-· Sprint 3: Reproductor de video y favoritos
-
-· Sprint 4: Sistema de recomendaciones y perfiles
-
-Roles para el Proyecto Frontend
-
-Product Owner
-
-Responsable de maximizar el valor del producto y gestionar el Product Backlog
-
-Scrum Master
-
-Facilita el proceso Scrum, elimina impedimentos y asegura que el equipo siga la metodología
-
-Desarrolladores Frontend
-
-Implementan la interfaz de usuario utilizando HTML, CSS, JavaScript y frameworks
-
-Diseñador UI/UX
-
-Crea la experiencia de usuario y la interfaz visual de la aplicación
-
-QA Tester
-
-Asegura la calidad del software mediante pruebas funcionales y de usabilidad
-
-Historias de Usuario para IsaacFilm
-
-HU01: Registro de nuevo usuario
-
-Como: Usuario nuevo
-
-Quiero: Poder registrarme en la plataforma
-
-Para: Acceder al catálogo de películas y series
-
-Criterios de aceptación:
-
-· Formulario con email, usuario y contraseña
-
-· Validación de campos obligatorios
-
-· Verificación de que el usuario no existe
-
-· Redirección a página principal tras registro exitoso
-
-HU02: Búsqueda de contenido
-
-Como: Usuario registrado
-
-Quiero: Poder buscar películas y series
-
-Para: Encontrar contenido específico rápidamente
-
-Criterios de aceptación:
-
-· Campo de búsqueda visible en header
-
-· Resultados en tiempo real mientras se escribe
-
-· Filtrado por categorías en resultados
-
-· Manejo de búsquedas sin resultados
-
-HU03: Ver detalles de película
-
-Como: Usuario interesado en una película
-
-Quiero: Ver información detallada de una película
-
-Para: Decidir si quiero verla
-
-Criterios de aceptación:
-
-· Página con título, sinopsis, elenco y director
-
-· Visualización de calificación y reseñas
-
-· Botón para reproducir o añadir a favoritos
-
-· Recomendaciones de contenido similar
-
-Proyecto IsaacFilm - Actividad 1: Definición Inicial del Proyecto Frontend
-
-Metodología de Desarrollo - © 2025 Isaac Code
 
 **Última actualización:** [13/10/2025]  
 **Versión del prototipo:** [v1.0]  
-**Herramienta:** Figma  
+**Herramienta:** [![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)]()
 
 ---
 
-## Propósito del Prototipo
+## Propósito del Prototipoq 
 
-Este documento centraliza toda la información sobre los **diseños y prototipos** creados en Figma para el proyecto. Sirve como **puente entre el diseño UX/UI y el desarrollo técnico**, facilitando la implementación durante los sprints.
+Este documento centraliza toda la información sobre los **diseños y prototipos** creados en Figma para el proyecto IsaacFilm, una plataforma inspirada en el estilo visual de Netflix, pero con una identidad visual cinematográfica y minimalista. Sirve como **puente entre el diseño UX/UI y el desarrollo técnico**, facilitando la implementación durante los sprints.
 
 **Objetivos del prototipo:**
-- Validar la **experiencia de usuario** antes de desarrollar
+- Validar la **experiencia de usuario** antes del desarrollo
 - Alinear la **visión del producto** entre todos los miembros del equipo
 - Servir como **referencia visual** durante el desarrollo backend y frontend
-- Documentar las **decisiones de diseño** tomadas en cada sprint
+- Documentar las **decisiones de diseño y sus fundamentos estéticos**
 
 ---
 
 ## Enlaces Principales
 
 ### Proyecto Principal
-**URL:** [https://www.figma.com/design/rJSE8SbLOQ39c8cuMvQCHl/App-IsaacFilm?node-id=498-844&t=M0we6lrvCKBRT3ab-1]
+
+**URL:** [![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)]
+[https://www.figma.com/design/rJSE8SbLOQ39c8cuMvQCHl/App-IsaacFilm?node-id=498-844&t=M0we6lrvCKBRT3ab-1]
 
 ---
 
@@ -294,42 +44,102 @@ Este documento centraliza toda la información sobre los **diseños y prototipos
 ### Sistema de Diseño
 
 **Paleta de colores:**
-- **Color primario:** #000000 - Acciones principales
-- **Color secundario:** #101010 - Elementos complementarios
-- **Color de acento:** #232323 - Llamadas a la acción
-- **Color cajas secundario:** #232323 - Para cajas
+- **Color primario:** #000000 - Fondo general y base del tema oscuro
+- **Color secundario:** #1A1A1A - Paneles, menús y fondos secundarios
+- **Color de acento:** #E50914 - Botones principales, indicadores activos
+- **Texto principal** #FFFFFF - Tipografía en áreas oscuras
+- **Texto secundario** #B3B3B3 - Descripciones o información secundaria
+- **Borde/Detalles** #2E2E2E -Lineas divisoras y bordes sutiles
 
 - **Colores de estado:**
-  - Éxito: #XXXXXX
-  - Error: #XXXXXX
-  - Advertencia: #XXXXXX
-  - Info: #XXXXXX
+  - Éxito: #648DDB
+  - Error: #FF0000
+  - Advertencia: #CD3546
+  - Info: #ACA5A5
 
 **Tipografía:**
-- **Principal:** [Nombre de fuente] - Textos y contenido
-- **Títulos:** [Nombre de fuente] - Encabezados
+- **Texto Principal:** [Afacad-Bold-96px] - Títulos de pantallas
+- **Subtítulos:** [Adamina-Regular-32px] - Para secciones
+- **Títulos de cajas** [Afacad-Bold-48px] - Para cajas
+- **Para textos en general** [Actor-REgular-24px] - Para cards en informacion de los card
+- **Pie de página** [Abhaya-REgular-24px] - Para pie de pagina copyright
 
 
 **Espaciado:**
 - Sistema de **8px grid**
 - Espaciado base: 8px, 16px, 24px, 32px
-
+- Márgen interno de tarjetas: 10px - 16px
+- Espaciado entre secciones: 64px
 ---
 
 ## Pantallas incluidas:**
 ### Flujo Principal
-1. **Página de bienvenida**
-   
+1. **Index de usuario no logueado**
+- Navbar menú (Inicio, Catálogo, Búsqueda).
+- Presentación con título (Películas Independientes y de Culto).
+- Subtítulo (Descubre cine que no encontrarás en otras plataformas).
+- Botones (Comenzar ahora, Explorar catálogo).
+- Categorías (Independientes, De culto, Internacionales).
+- Pie de página (© 2025 IsaacFilm. Todos los derechos reservados).
 
-2. **Formulario de registro**
-   
+2. **Formulario de registro de nuevo usuario**
+- Formulario (Nombre, Apellido, Correo electrónico, Usuario, Contraseña, Confirmar contraseña, Fecha de nacimiento).
+- Componente de calendario.
+- Checkbox.
+- Aceptar los Términos y Condiciones y Política de Privacidad.
+- Botón (Crear Cuenta).
+- Pregunta (¿Ya tienes una cuenta?).
+- Hiperlink (Inicia sesión).
 
-3. **Verificación de email**
-   
+3. **Inicio de sesion**
+- Framer dividico para (Imágen de fondo y Formulario).
+- Título de Isaac Film.
+- Formulario (Correo electrónico, Contraseña)
+- Checkbox de Recordar sesión.
+- Hiperlink (¿Olvidaste tu contraseña?)
+- Botón (Inicia sesión).
 
-4. **Login**
-   
+4. **Pantalla de inicio logueado**
+Igual que la pantalla de Index pero esta vez con la opcion de (Configuración de cuenta).
+- Solo esta el botón (Explorar catálogo).
 
+5. **Pantalla de Catálogo**
+- Navbar menú (Inicio, Catálogo, Búsqueda)
+- Título (Catálogo de Películas).
+- Sección (Buscar Películas, Todos los géneros, Más populares).
+- Sección de cards de películas gracias a la API de TMDB.
+- Botones (Anterior, Siguiente)
+- Contador de páginas de todas las películas gracias a la API de TMDB.
+- Pagina de pie (© 2025 IsaacFilm. Todos los derechos reservados).
+
+6. **Detalle de Película**
+- Navbar menú (Inicio, Catálogo, Búsqueda, Configuración de cuenta).
+- Sección que muestra (Imágen de película, Título de película, Valoración de la película, año de la película, Duración de la película, Característica de la película y descripción).
+- Botones (Ver ahora, Añadir a Favoritos).
+- Reparto principal: Muestra (Imágen, nombres reales y nombres dentro de la película de los actores).
+- Opción disponible para (Ver más) personajes de la película.
+- Pie de página (© 2025 IsaacFilm. Todos los derechos reservados).
+
+7. **Búsqueda de película**
+- Nabvar menú.
+- Título (Buscar Películas)
+- Sección para buscar películas por el título.
+- Botón (Buscar).
+- En el apartado de abajo aparecerán las películas relacionadas con lo que el usuario pide Buscar.
+
+8. **Configuración de perfil**
+- Título (Perfil)
+- Icono para ir hacia tras
+- Perfil de usuario
+- Icono de cámara (Permite al usuario cambiar de foto de perfil)
+- Botón para Editar Perfil
+- Subtítulo de Mis Favoritos
+- Opción para Ver Todo (Todas las películas guardadas a Favoritos)
+- Cátalogo de las Películas que fueron agregadas a Favoritos
+- Botones de ELiminar de Favoritos y Ver Detalles
+- Pie de página
+
+9. **Pantalla de mis películas favoritas**
 **Interacciones prototipadas:**
 - Navegación entre pantallas
 - Validación de formularios
@@ -382,7 +192,7 @@ Este documento centraliza toda la información sobre los **diseños y prototipos
 
 **Breakpoints definidos:**
 - **Mobile:** 320px - 767px
-- **Desktop:** 1024px+
+- **Desktop:** 1629px+
 
 ### Accesibilidad
 

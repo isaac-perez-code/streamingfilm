@@ -20,8 +20,8 @@ Plataforma de streaming inspirada en Netflix, desarrollada como proyecto académ
 
 
 ### Backend 
-- Node.js / Python / [Lenguaje a usar]
-- Base de datos: [PostgreSQL/MongoDB]
+- Node.js / JavaScript / Prisma
+- Base de datos: PostgreSQL
 
 ## Estructura del Proyecto
 Explicación breve de las carpetas principales.
