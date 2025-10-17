@@ -1,95 +1,75 @@
-# Sprint Planning - Sprint 1
+🗓 Sprint Planning - Sprint 1
 
-**Fecha de Planning:** 17/10/2025  
-**Duración del Sprint:** 2 semanas  
+Fecha de Planning: 14/10/2025
+Duración del Sprint: 2 semanas
 
----
+🎯 Objetivo del Sprint
 
-## 🎯 Objetivo del Sprint
+Desarrollar la base del proyecto estableciendo la estructura del repositorio, configurando el entorno de trabajo para frontend y backend, y creando las primeras pantallas e interacciones del sistema. El objetivo es entregar una primera versión funcional del registro e inicio de sesión de usuarios.
 
-Definir e implementar la base visual y funcional del sistema **IsaacFilm**, centrando el esfuerzo en el **diseño UX/UI**, el flujo de **registro e inicio de sesión**, y la integración inicial del **catálogo de películas** proveniente de la API TMDB.
+📋 Product Backlog Seleccionado
+Historia #1: Configuración inicial del proyecto
 
-El propósito de este sprint es entregar un **MVP navegable en Figma** y la **estructura base del frontend y backend** en GitHub, garantizando coherencia entre diseño, funcionalidad y documentación técnica.
+Como: desarrollador del equipo
 
----
+Quiero: crear la estructura base del proyecto con carpetas para docs/, src/ y tests/
 
-## 🧩 Product Backlog Seleccionado
+Para: mantener un orden y facilitar la colaboración entre los miembros del equipo
 
-### Historias de Usuario Comprometidas
+Story Points: 2
 
----
+Criterios de Aceptación:
 
-#### Historia #1: Registro de usuarios
-- **Como:** usuario nuevo  
-- **Quiero:** registrarme con mis datos personales y crear una cuenta  
-- **Para:** poder acceder al catálogo de películas personalizadas  
-- **Story Points:** 5  
-- **Criterios de Aceptación:**
-  - [x] El formulario debe incluir los campos: nombre, apellido, correo, usuario, contraseña y fecha de nacimiento.  
-  - [x] Validar que ningún campo esté vacío y mostrar mensajes de error claros.  
-  - [x] Mostrar mensaje de confirmación al crear una cuenta exitosamente.
+ Estructura creada con carpetas de frontend y backend
 
----
+ Archivos README.md y .gitignore configurados
 
-#### Historia #2: Inicio de sesión
-- **Como:** usuario registrado  
-- **Quiero:** iniciar sesión con mi correo y contraseña  
-- **Para:** acceder a mi perfil y ver mis películas favoritas  
-- **Story Points:** 5  
-- **Criterios de Aceptación:**
-  - [x] El formulario debe validar credenciales contra la base de datos simulada o archivo JSON.  
-  - [x] Mostrar mensaje de error si los datos son incorrectos.  
-  - [x] Redirigir a la pantalla de inicio al iniciar sesión correctamente.
+Historia #2: Implementar el registro de usuario (frontend y backend)
 
----
+Como: nuevo usuario del sistema
 
-#### Historia #3: Catálogo de películas
-- **Como:** usuario autenticado  
-- **Quiero:** visualizar un catálogo con las películas disponibles  
-- **Para:** explorar títulos y acceder a su información detallada  
-- **Story Points:** 8  
-- **Criterios de Aceptación:**
-  - [x] Mostrar al menos 8 películas por defecto con sus portadas.  
-  - [x] Incluir botones “Ver Detalles” y “Añadir a Favoritos”.  
-  - [x] Consumir datos de la API TMDB o dataset estático de respaldo.
+Quiero: registrarme ingresando mis datos personales
 
----
+Para: poder acceder al sistema con mis credenciales
 
-#### Historia #4: Navegación principal
-- **Como:** usuario general  
-- **Quiero:** poder desplazarme fácilmente por las secciones del sistema  
-- **Para:** acceder rápidamente al catálogo, perfil y favoritos  
-- **Story Points:** 3  
-- **Criterios de Aceptación:**
-  - [x] Navbar visible en todas las pantallas principales.  
-  - [x] Diseño responsive para escritorio y móvil.  
-  - [x] Accesos a Inicio, Catálogo y Búsqueda.
+Story Points: 5
 
----
+Criterios de Aceptación:
 
-## 🔢 Total de Story Points: **21**
+ Formulario de registro funcional con validación de campos
 
----
+ Conexión con el backend para almacenar los datos en la base de datos
 
-## 📅 Entregables del Sprint
-- Prototipo funcional en **Figma** (v1.1).  
-- Repositorios estructurados en GitHub (frontend y backend).  
-- Documentación de componentes UI y flujos.  
-- README.md actualizado con propósito, objetivos y enlaces.  
-- Carpeta `docs/` con planificación y retrospectiva.
+Historia #3: Implementar el inicio de sesión
 
----
+Como: usuario registrado
 
-## 📋 Herramientas Utilizadas
-- **Figma:** Diseño UX/UI  
-- **GitHub:** Control de versiones  
-- **VS Code:** Entorno de desarrollo  
-- **Trello / Notion:** Gestión de tareas y seguimiento Scrum  
-- **Canva:** Elementos visuales de presentación  
+Quiero: iniciar sesión con mi correo y contraseña
 
----
+Para: acceder a mi cuenta y visualizar mi panel principal
 
-**Responsable:** Isaac Pérez  
-**Equipo:** Diseño y Desarrollo IsaacFilm  
-**Versión del documento:** v1.0  
-**Última actualización:** 17/10/2025
+Story Points: 4
+
+Criterios de Aceptación:
+
+ Formulario de login con validaciones
+
+ Autenticación validada en backend mediante JWT o sesión segura
+
+Historia #4: Diseñar prototipos en Figma
+
+Como: diseñador del equipo
+
+Quiero: definir los prototipos visuales del registro, login y pantalla principal
+
+Para: mantener coherencia en la interfaz de usuario
+
+Story Points: 3
+
+Criterios de Aceptación:
+
+ Prototipos cargados en docs/figma/prototipos.md
+
+ Colores, fuentes e iconografía definidos
+
+Total de Story Points: 14
