@@ -1,75 +1,56 @@
-🗓 Sprint Planning - Sprint 1
+# Sprint Planning - Sprint 1  
 
-Fecha de Planning: 14/10/2025
-Duración del Sprint: 2 semanas
+**Fecha de Planning:** 01/10/2025  
+**Duración del Sprint:** 2 semanas (01/10/2025 - 14/10/2025)  
 
-🎯 Objetivo del Sprint
+## 🎯 Objetivo del Sprint  
+Diseñar el prototipo funcional de **IsaacFilm** en Figma, definir la estructura general del proyecto (frontend y backend), configurar el entorno de desarrollo y crear el modelo inicial de base de datos con Prisma.  
+El propósito principal es sentar las bases visuales y técnicas para los siguientes sprints de desarrollo.
 
-Desarrollar la base del proyecto estableciendo la estructura del repositorio, configurando el entorno de trabajo para frontend y backend, y creando las primeras pantallas e interacciones del sistema. El objetivo es entregar una primera versión funcional del registro e inicio de sesión de usuarios.
+---
 
-📋 Product Backlog Seleccionado
-Historia #1: Configuración inicial del proyecto
+## 📦 Product Backlog Seleccionado  
 
-Como: desarrollador del equipo
+### Historias de Usuario Comprometidas  
 
-Quiero: crear la estructura base del proyecto con carpetas para docs/, src/ y tests/
+#### Historia #1: Diseño del Prototipo en Figma
+- **Como:** Diseñador UX/UI  
+- **Quiero:** Crear un prototipo visual coherente con la temática de streaming  
+- **Para:** Que los usuarios puedan visualizar cómo se verá la plataforma  
+- **Story Points:** 8  
+- **Criterios de Aceptación:**
+  - [x] Pantallas principales creadas: Inicio, Registro, Login, Catálogo y Detalles  
+  - [x] Paleta de colores y tipografía definidas  
+  - [x] Diseño responsive (mobile y desktop)  
 
-Para: mantener un orden y facilitar la colaboración entre los miembros del equipo
+#### Historia #2: Configuración del Entorno Backend
+- **Como:** Desarrollador Backend  
+- **Quiero:** Configurar un proyecto Node.js con Express y Prisma  
+- **Para:** Tener una base sólida para las futuras APIs  
+- **Story Points:** 10  
+- **Criterios de Aceptación:**
+  - [x] Proyecto inicializado con `npm init`  
+  - [x] Prisma instalado y configurado  
+  - [ ] Base de datos conectada correctamente (PostgreSQL - Neon)  
 
-Story Points: 2
+#### Historia #3: Estructura del Proyecto
+- **Como:** Desarrollador Full Stack  
+- **Quiero:** Definir la estructura de carpetas del proyecto  
+- **Para:** Mantener una organización clara y escalable  
+- **Story Points:** 6  
+- **Criterios de Aceptación:**
+  - [x] Creación de carpetas: `/src/backend`, `/src/frontend`, `/docs`  
+  - [x] README principal documentado  
+  - [ ] Archivos `.gitignore` y `package.json` correctamente configurados  
 
-Criterios de Aceptación:
+---
 
- Estructura creada con carpetas de frontend y backend
+## 📊 Estimación Total del Sprint  
+**Total de Story Points:** 24  
 
- Archivos README.md y .gitignore configurados
+## 🧩 Equipo  
+- **Scrum Master:** Isaac Pérez  
+- **Product Owner:** Instructor del curso  
+- **Developers:** Isaac Pérez  
+---
 
-Historia #2: Implementar el registro de usuario (frontend y backend)
-
-Como: nuevo usuario del sistema
-
-Quiero: registrarme ingresando mis datos personales
-
-Para: poder acceder al sistema con mis credenciales
-
-Story Points: 5
-
-Criterios de Aceptación:
-
- Formulario de registro funcional con validación de campos
-
- Conexión con el backend para almacenar los datos en la base de datos
-
-Historia #3: Implementar el inicio de sesión
-
-Como: usuario registrado
-
-Quiero: iniciar sesión con mi correo y contraseña
-
-Para: acceder a mi cuenta y visualizar mi panel principal
-
-Story Points: 4
-
-Criterios de Aceptación:
-
- Formulario de login con validaciones
-
- Autenticación validada en backend mediante JWT o sesión segura
-
-Historia #4: Diseñar prototipos en Figma
-
-Como: diseñador del equipo
-
-Quiero: definir los prototipos visuales del registro, login y pantalla principal
-
-Para: mantener coherencia en la interfaz de usuario
-
-Story Points: 3
-
-Criterios de Aceptación:
-
- Prototipos cargados en docs/figma/prototipos.md
-
- Colores, fuentes e iconografía definidos
-
-Total de Story Points: 14
