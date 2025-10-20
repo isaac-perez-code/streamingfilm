@@ -1,5 +1,5 @@
 //Traer el servicio
-import { userService } from "../services/userServices";
+import { userService } from "../services/userServices.js";
 
 export const userController = {
     async getUsers(res) {

@@ -1,4 +1,4 @@
-import {PrismaClient} from '@prisma/clearInterval';
+import {PrismaClient} from '@prisma/client';
 
 const prisma = new PrismaClient();
 
