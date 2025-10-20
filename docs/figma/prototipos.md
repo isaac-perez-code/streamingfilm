@@ -1,29 +1,25 @@
 # Prototipos del Proyecto
 
 ## Información del Documento
-Presentación - Metodología de Desarrollo
-
-
-Actividad 1: Definición Inicial del Proyecto Frontend
-
-Idea de la Aplicación Web
-
-IsaacFilm es una plataforma de streaming de películas y series inspirada en Netflix, con un enfoque en contenido independiente y películas de culto.
-
-
-
-**Última actualización:** [13/10/2025]  
-**Versión del prototipo:** [v1.0]  
+**Curso:** Backend Developer Web
+**Proyecto:** Plataforma de Streaming IsaacFilm
+**Actividad:** Definición Inicial del Proyecto Frontend
+**Autor:** Isaac Pérez
+**Última actualización:** [17/10/2025]  
+**Versión del prototipo:** [v1.1]  
 **Herramienta:** [![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)]()
 
 ---
 
-## Propósito del Prototipoq 
+## Propósito del Prototipo 
 
 Este documento centraliza toda la información sobre los **diseños y prototipos** creados en Figma para el proyecto IsaacFilm, una plataforma inspirada en el estilo visual de Netflix, pero con una identidad visual cinematográfica y minimalista. Sirve como **puente entre el diseño UX/UI y el desarrollo técnico**, facilitando la implementación durante los sprints.
 
 **Objetivos del prototipo:**
 - Validar la **experiencia de usuario** antes del desarrollo
+- Documentar las **interacciones clave** (registro, búsqueda, detalles, favoritos)
+- Establecer una **referencia visual uniforme** para los sprints de desarrollo
+- Garantizar la **consistencia visual** entre diseño y codigo
 - Alinear la **visión del producto** entre todos los miembros del equipo
 - Servir como **referencia visual** durante el desarrollo backend y frontend
 - Documentar las **decisiones de diseño y sus fundamentos estéticos**
@@ -44,29 +40,28 @@ Este documento centraliza toda la información sobre los **diseños y prototipos
 ### Sistema de Diseño
 
 **Paleta de colores:**
-- **Color primario:** #000000 - Fondo general y base del tema oscuro
-- **Color secundario:** #1A1A1A - Paneles, menús y fondos secundarios
-- **Color de acento:** #E50914 - Botones principales, indicadores activos
-- **Texto principal** #FFFFFF - Tipografía en áreas oscuras
-- **Texto secundario** #B3B3B3 - Descripciones o información secundaria
-- **Borde/Detalles** #2E2E2E -Lineas divisoras y bordes sutiles
+- **Primario:** #000000 - Fondo general del tema oscuro
+- **Secundario:** #1A1A1A - Paneles y secciones secundarias
+- **Acento:** #E50914 - Botones, indicadores activos
+- **Texto principal** #FFFFFF - Tipografía principal
+- **Texto secundario** #B3B3B3 - Descripciones y detalles
+- **Borde/Detalles** #2E2E2E - Líneas divisorias
 
 - **Colores de estado:**
-  - Éxito: #648DDB
-  - Error: #FF0000
-  - Advertencia: #CD3546
-  - Info: #ACA5A5
+  - Éxito: #648DDB - Mensajes positivos
+  - Error: #FF0000 - Validaciones fallidas
+  - Advertencia: #CD3546 - Alertas
+  - Info: #ACA5A5 - Notificaciones informativas
 
 **Tipografía:**
-- **Texto Principal:** [Afacad-Bold-96px] - Títulos de pantallas
-- **Subtítulos:** [Adamina-Regular-32px] - Para secciones
-- **Títulos de cajas** [Afacad-Bold-48px] - Para cajas
-- **Para textos en general** [Actor-REgular-24px] - Para cards en informacion de los card
-- **Pie de página** [Abhaya-REgular-24px] - Para pie de pagina copyright
-
+- **Texto Principal:** [Afacad-Bold-96px] 
+- **Subtítulos:** [Adamina-Regular-32px] 
+- **Cajas y encabezados secundarios** [Afacad-Bold-48px] 
+- **Texto general y cards** [Actor-REgular-24px] 
+- **Pie de página** [Abhaya-Regular-24px] 
 
 **Espaciado:**
-- Sistema de **8px grid**
+- Sistema de espaciado**8px grid**
 - Espaciado base: 8px, 16px, 24px, 32px
 - Márgen interno de tarjetas: 10px - 16px
 - Espaciado entre secciones: 64px
@@ -74,72 +69,52 @@ Este documento centraliza toda la información sobre los **diseños y prototipos
 
 ## Pantallas incluidas:**
 ### Flujo Principal
-1. **Index de usuario no logueado**
-- Navbar menú (Inicio, Catálogo, Búsqueda).
-- Presentación con título (Películas Independientes y de Culto).
-- Subtítulo (Descubre cine que no encontrarás en otras plataformas).
-- Botones (Comenzar ahora, Explorar catálogo).
-- Categorías (Independientes, De culto, Internacionales).
-- Pie de página (© 2025 IsaacFilm. Todos los derechos reservados).
+1. **Pantalla principal (usuario no logueado)**
+- Hero section con mensaje: "Descubre cine que no encontrarás en otras plataformas"
+- Botones: "Comenzar ahora" y "Explorar catálogo"
+- Navbar: Inicio, Catálogo, Búsqueda
+- Pie de pagina personalizado
 
-2. **Formulario de registro de nuevo usuario**
-- Formulario (Nombre, Apellido, Correo electrónico, Usuario, Contraseña, Confirmar contraseña, Fecha de nacimiento).
-- Componente de calendario.
-- Checkbox.
-- Aceptar los Términos y Condiciones y Política de Privacidad.
-- Botón (Crear Cuenta).
-- Pregunta (¿Ya tienes una cuenta?).
-- Hiperlink (Inicia sesión).
+2. **Formulario de registro**
+- Campos: Nombre, Apellido, Correo, Contraseña, Confirmación, Fecha de nacimiento
+- Checkbox: Crear cuenta
+- Enlace: "¿Ya tienes una cuenta? Inicia sesión" 
 
 3. **Inicio de sesion**
-- Framer dividico para (Imágen de fondo y Formulario).
-- Título de Isaac Film.
-- Formulario (Correo electrónico, Contraseña)
-- Checkbox de Recordar sesión.
-- Hiperlink (¿Olvidaste tu contraseña?)
-- Botón (Inicia sesión).
+- Fondo dividido (imágen + formulario)
+- Campos: Email y contraseña
+- Checkbox: Recordar sesión
+- Link: ¿Olvidaste tu contraseña?
+- Botón: Iniciar sesión
 
-4. **Pantalla de inicio logueado**
-Igual que la pantalla de Index pero esta vez con la opcion de (Configuración de cuenta).
-- Solo esta el botón (Explorar catálogo).
+4. **Pantalla de inicio (usuario logueado)**
+- Similar al index pero con acceso a Configuración de Cuenta
+- Botón principal: Explorar catálogo
 
-5. **Pantalla de Catálogo**
-- Navbar menú (Inicio, Catálogo, Búsqueda)
-- Título (Catálogo de Películas).
-- Sección (Buscar Películas, Todos los géneros, Más populares).
-- Sección de cards de películas gracias a la API de TMDB.
-- Botones (Anterior, Siguiente)
-- Contador de páginas de todas las películas gracias a la API de TMDB.
-- Pagina de pie (© 2025 IsaacFilm. Todos los derechos reservados).
+5. **Catálogo de películas**
+- Sección con resultados obtenidos de la API de TMDB
+- Filtros: Todos los géneros, Más populares
+- Paginación: Botones Anterior, Siguiente + contador
+- Pie de página personalizado
 
 6. **Detalle de Película**
-- Navbar menú (Inicio, Catálogo, Búsqueda, Configuración de cuenta).
-- Sección que muestra (Imágen de película, Título de película, Valoración de la película, año de la película, Duración de la película, Característica de la película y descripción).
-- Botones (Ver ahora, Añadir a Favoritos).
-- Reparto principal: Muestra (Imágen, nombres reales y nombres dentro de la película de los actores).
-- Opción disponible para (Ver más) personajes de la película.
-- Pie de página (© 2025 IsaacFilm. Todos los derechos reservados).
+- Imágen destacada, título, valoración, año, duración y descripción
+- Botones: Ver ahora, Añadir a Favoritos
+- Sección de reparto con nombres e imágenes
+- Recomendaciones relacionadas
 
-7. **Búsqueda de película**
-- Nabvar menú.
-- Título (Buscar Películas)
-- Sección para buscar películas por el título.
-- Botón (Buscar).
-- En el apartado de abajo aparecerán las películas relacionadas con lo que el usuario pide Buscar.
+7. **Búsqueda**
+- Campo de búsqueda visible con resultados dinámicos
+- Filtro de coincidencias y manejo de búsquedas vacías
 
 8. **Configuración de perfil**
-- Título (Perfil)
-- Icono para ir hacia tras
-- Perfil de usuario
-- Icono de cámara (Permite al usuario cambiar de foto de perfil)
-- Botón para Editar Perfil
-- Subtítulo de Mis Favoritos
-- Opción para Ver Todo (Todas las películas guardadas a Favoritos)
-- Cátalogo de las Películas que fueron agregadas a Favoritos
-- Botones de ELiminar de Favoritos y Ver Detalles
-- Pie de página
+- Foto de pefil editable
+- Sección "Mis Favoritos"
+- Opción "Ver Todo" para mostrar todas las películas guardadas
 
 9. **Pantalla de mis películas favoritas**
+- Lista de cards con opciones "Ver Detalles" y "Eliminar de favoritos"
+  
 **Interacciones prototipadas:**
 - Navegación entre pantallas
 - Validación de formularios
@@ -153,47 +128,52 @@ Igual que la pantalla de Index pero esta vez con la opcion de (Configuración de
 **Componentes diseñados:**
 
 #### Botones
-- **Primario:** Acciones principales (guardar, enviar)
-- **Secundario:** Acciones secundarias (cancelar, volver)
-- **Terciario:** Acciones terciarias (enlaces, texto)
-- **Estados:** Default, hover, active, disabled, loading
+- **Primario:** Acciones principales (guardar, enviar) - #E50914
+- **Secundario:** Acciones secundarias (cancelar, volver) - estilo menos prominente
+- **Terciario:** Acciones terciarias (enlaces, texto) - estilo textual
+- **Estados:** Default, hover, active, disabled, loading (cada estado documentado como variante en figma)
 
 #### Formularios
-- **Input text:** Entrada de texto estándar
-- **Input password:** Con toggle de visibilidad
-- **Select dropdown:** Con búsqueda
-- **Checkbox:** Individual y grupos
-- **Radio buttons:** Opciones excluyentes
-- **Date picker:** Selección de fechas
-- **File upload:** Carga de archivos
+- **Input text:** Entrada de texto estándar con placeholder y label
+- **Input password:** Con toggle para mostrar/ocultar contraseña
+- **Select dropdown:** Con búsqueda interna para listas largas
+- **Checkbox:** Individual y grupos (con estados: cheched / unchecked / indeterminate)
+- **Radio buttons:** Opciones excluyentes visualmente claras
+- **Date picker:** Selección de fechas (para registro)
+- **File upload:** Carga de archivos (foto de perfil), con validación de formato/tamaño
 
 #### Navegación
-- **Navbar:** Barra superior de navegación
-- **Sidebar:** Menú lateral colapsable
-- **Tabs:** Pestañas para contenido
-- **Pagination:** Paginación de listas
+- **Navbar:** Barra superior de navegación fija, responsive, con logo y búsquedas
+- **Sidebar:** Menú lateral colapsable (opcional para vistas internas)
+- **Tabs:** Pestañas para contenido en vistas
+- **Pagination:** Paginación de listas numéricas y controles Prev/Next
 
 #### Feedback
-- **Toast notifications:** Mensajes temporales
-- **Modals:** Ventanas emergentes
-- **Alerts:** Avisos en contexto
-- **Loading spinners:** Indicadores de carga
-- **Progress bars:** Barras de progreso
+- **Toast notifications:** Mensajes temporales para confirmar acciones
+- **Modals:** Ventanas emergentes para confirmaciones
+- **Alerts:** Avisos en contexto para errores o información crítica
+- **Loading spinners:** Indicadores de carga para peticiones
+- **Progress bars:** Barras de progreso para cargas o procesos largos
 
 #### Visualización de datos
-- **Cards:** Tarjetas de información
-- **Tables:** Tablas de datos
-- **Charts:** Gráficos (si aplica)
-- **Stats cards:** Tarjetas de estadísticas
+- **Cards:** Tarjeta de película (poster, título, rating)
+- **Tables:** Tablas para vistas administrativas o listados técnicos
+- **Charts:** Gráficos (si aplica para analíticas) 
+- **Stats cards:** Tarjetas con métricas (usuarios activos, películas añadidas)h
 
 ---
 
 ### Responsive Design
 
 **Breakpoints definidos:**
-- **Mobile:** 320px - 767px
-- **Desktop:** 1629px+
-
+- **Mobile:** 442px - 984px
+- **Desktop:** 1629px +
+  
+**Ajustes:**
+  - Navegación colapsable en móvil (hamburger menu)
+  - Grid de películas reflow (4 columnas -> 2 -> 1 según breackpoint)
+  - CTA y botones reescalados para accesibilidad táctil
+    
 ### Accesibilidad
 
 **Criterios implementados:**
@@ -210,9 +190,9 @@ Igual que la pantalla de Index pero esta vez con la opcion de (Configuración de
 ### Para el Equipo de Desarrollo
 
 **Antes de comenzar un sprint:**
-- [ ] Revisar el prototipo de Figma correspondiente al sprint
-- [ ] Identificar todos los componentes necesarios
-- [ ] Validar los endpoints de backend requeridos
+- [X] Revisar el prototipo de Figma correspondiente al sprint
+- [X] Identificar todos los componentes necesarios
+- [X] Validar los endpoints de backend requeridos
 - [ ] Confirmar las historias de usuario vinculadas
 
 **Durante el desarrollo:**
@@ -267,9 +247,9 @@ R: Selecciona el elemento → Export → Configura formato y resolución → Exp
 
 ## Contacto y Soporte
 
-**Responsable de diseño:** [Nombre]  
-**Canal de comunicación:** [Slack, Discord, etc.]  
-**Horario de disponibilidad:** [Especificar]
+**Responsable de diseño:** Isaac Pérez  
+**Canal de comunicación:** GitHub Issues  
+**Horario de disponibilidad:** Lunes a viernes - 8:00 a.m. a 5:00 p.m.
 
 **Para dudas sobre el prototipo:**
 1. Revisar este documento primero
@@ -294,6 +274,6 @@ R: Selecciona el elemento → Export → Configura formato y resolución → Exp
 
 ---
 
-**Última actualización:** [Fecha]  
-**Mantenido por:** [Equipo de diseño/Product Owner]  
+**Última actualización:** 17/10/2025 
+**Mantenido por:** Equipo de Diseño y Desarrollo IsaacFilm
 **Versión del documento:** 1.0
