@@ -276,4 +276,8 @@ R: Selecciona el elemento → Export → Configura formato y resolución → Exp
 
 **Última actualización:** 17/10/2025 
 **Mantenido por:** Equipo de Diseño y Desarrollo IsaacFilm
+<<<<<<< HEAD
 **Versión del documento:** 1.0
+=======
+**Versión del documento:** 1.0
+>>>>>>> f800a45cc8b0aa4544d51fca8f741a5922d6bd60
