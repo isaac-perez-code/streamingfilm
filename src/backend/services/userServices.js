@@ -1,20 +1,17 @@
-import {PrismaClient} from '@prisma/client';
+import {PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
-export const userService = {
-    //Crear usuario
-        async createUser(data){
+export const userService ={
+    //Crear usuarios
+    async createUser(data){
         try{
             const {email, name} = data;
             return await prisma.user.create({
-                data: {
-                    email,
-                    name
-                }
+                data :{email, name}
             })
         }catch(error){
-            throw new Error('Error al crear usuario' + error.message);
+            throw new Error('Error al crear usuario: ' + error.message);
         }
     },
 
@@ -23,7 +20,19 @@ export const userService = {
         try{
             return await prisma.user.findMany();
         }catch(error){
-            throw new Error('Error al obtener usuarios' + error.message);
+            throw new Error('Error al obtener usuarios: ' + error.message);
+        }
+    },
+
+    //Actualizar usuarios
+    async updateUser(id, data){
+        try{
+            return await prisma.user.update({
+                where: {id:parseInt(id)},
+                data: data
+            })
+        }catch(error){
+            throw new Error('Error al actualizar usuario: ' + error.message);
         }
     }
 }

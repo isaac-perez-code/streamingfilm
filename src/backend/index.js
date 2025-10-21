@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import userRoutes from './routes/userRoutes.js'
+import userRoutes from './routes/userRoutes.js';
 
 dotenv.config();
 
@@ -10,17 +10,18 @@ const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
-app.use(express.urlencoded({ extended: true}));
+app.use(express.urlencoded({extended:true}));
 
-app.get('/', (req, res) => {
+app.get('/',(req, res) => {
     res.json({
-        message: `API corriendo correctamente en el puerto ${PORT}`
+        message:'Api corriendo correctamente'
     });
 });
 
-//Rutas que manejan usuaios
-app.use('/api/users', userRoutes);
+//Rutas que deseo usar
+app.use('/api/users',userRoutes);
 
 app.listen(PORT, () => {
-    console.log('𒆜🆂🅴🆁🆅🅸🅳🅾🆁 🅲🅾🆁🆁🅸🅴🅽🅳🅾 🅴🆇🅸🆃🅾🆂🅰🅼🅴🅽🆃🅴 🖥️');
-})
+    console.log(`🅢🅔🅡🅥🅘🅓🅞🅡 🅒🅞🅡🅡🅘🅔🅝🅓🅞 🅔🅧🅘🅣🅞🅢🅐🅜🅔🅝🅣🅔 🅔🅝 🅔🅛 🅟🅤🅔🅡🅣🅞 ●︿● ${PORT}`);
+});
+
