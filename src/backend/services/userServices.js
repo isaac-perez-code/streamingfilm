@@ -1,3 +1,4 @@
+
 import {PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient;
@@ -58,5 +59,22 @@ export const userService ={
             if (error.code) err.code = error.code;
             throw err;
         }
+    },
+
+    //Eliminar usuarios
+    async deleteUser(id){
+        try{
+            const user = await prisma.user.findUnique({
+                where: { id: parseInt(id) }
+            });
+            if (!user) {
+                throw new Error('Usuario no encontrado');
+            }
+            await prisma.user.delete({
+                where: { id: parseInt(id) }
+            });
+        }catch(error){
+            throw new Error('Error al eliminar usuario: ' + error.message);
+        }
     }
-}
+};

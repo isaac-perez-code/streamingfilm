@@ -15,7 +15,7 @@ const router = express.Router();
  *           example: 1
  *         email:
  *           type: string
- *           example: isaa@gmail.com
+ *           example: isaac@gmail.com
  *         name:
  *           type: string
  *           example: Isaac Pérez
@@ -43,7 +43,7 @@ const router = express.Router();
  *                   items:
  *                     $ref: '#/components/schemas/User'
  */
-router.get('/',userController.getUsers);    
+router.get('/', userController.getUsers);
 
 /**
  * @swagger
@@ -69,15 +69,16 @@ router.get('/',userController.getUsers);
  *         description: Usuario creado correctamente
  *         content:
  *           application/json:
- *                   $ref: '#/components/schemas/User'
+ *             schema:
+ *               $ref: '#/components/schemas/User'
  *       400:
  *         description: Solicitud inválida - faltan campos obligatorios
  *       500:
  *         description: Error del servidor al crear el usuario
  */
-router.post('/',userController.createUser);
+router.post('/', userController.createUser);
 
-/** 
+/**
  * @swagger
  * /api/users/{id}:
  *   put:
@@ -128,12 +129,38 @@ router.post('/',userController.createUser);
  */
 router.put('/:id', userController.updateUser);
 
-//Rutas para llamar al usuario
-router.get('/',userController.getUsers);
-router.post('/',userController.createUser);
-router.put('/:id', userController.updateUser);
-
-//Método para eliminar DELETE
-//Método para modificar PATCH
+/**
+ * @swagger
+ * /api/users/{id}:
+ *   delete:
+ *     summary: Eliminar un usuario por ID
+ *     tags: [User]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         schema:
+ *           type: integer
+ *         required: true
+ *         description: ID del usuario a eliminar
+ *     responses:
+ *       200:
+ *         description: Usuario eliminado correctamente
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                   example: true
+ *                 message:
+ *                   type: string
+ *                   example: Usuario eliminado correctamente
+ *       404:
+ *         description: Usuario no encontrado
+ *       500:
+ *         description: Error del servidor
+ */
+router.delete('/:id', userController.deleteUser);
 
 export default router;
