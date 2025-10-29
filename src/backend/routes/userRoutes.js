@@ -1,5 +1,5 @@
 import express from 'express';
-import { userController } from '../controllers/userController.js';
+import { userControllers } from '../controllers/userControllers.js';
 
 const router = express.Router();
 
@@ -43,7 +43,7 @@ const router = express.Router();
  *                   items:
  *                     $ref: '#/components/schemas/User'
  */
-router.get('/', userController.getUsers);
+router.get('/', userControllers.getUsers);
 
 /**
  * @swagger
@@ -76,7 +76,7 @@ router.get('/', userController.getUsers);
  *       500:
  *         description: Error del servidor al crear el usuario
  */
-router.post('/', userController.createUser);
+router.post('/', userControllers.createUser);
 
 /**
  * @swagger
@@ -127,7 +127,7 @@ router.post('/', userController.createUser);
  *       500:
  *         description: Error del servidor
  */
-router.put('/:id', userController.updateUser);
+router.put('/:id', userControllers.updateUser);
 
 /**
  * @swagger
@@ -161,6 +161,6 @@ router.put('/:id', userController.updateUser);
  *       500:
  *         description: Error del servidor
  */
-router.delete('/:id', userController.deleteUser);
+router.delete('/:id', userControllers.deleteUser);
 
 export default router;

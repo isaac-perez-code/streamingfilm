@@ -1,10 +1,10 @@
 import express from 'express';
-import { registerUser} from '../controllers/emailController.js';
+import { registerUser} from '../controllers/emailControllers.js';
 
 const router = express.Router();
 /**
  * @swagger
- * /api/email/register:
+ * /api/auth/register:
  *  post:
  *    summary: REGISTRAR NUEVO USUARIO Y ENVIAR
  *    tags: [Email]

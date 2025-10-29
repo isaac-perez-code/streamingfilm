@@ -1,7 +1,7 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "API REST desarrollada con Node.js, Express y PostgreSQL (Prisma ORM).",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -15,9 +15,11 @@
   "license": "ISC",
   "dependencies": {
     "@prisma/client": "^6.17.1",
+    "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
     "nodemailer": "^7.0.10",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1"
