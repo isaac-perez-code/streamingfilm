@@ -30,18 +30,6 @@ const router = express.Router();
  *     responses:
  *       200:
  *         description: Lista de usuarios obtenida correctamente
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 success:
- *                   type: boolean
- *                   example: true
- *                 data:
- *                   type: array
- *                   items:
- *                     $ref: '#/components/schemas/User'
  */
 router.get('/', userControllers.getUsers);
 
@@ -82,14 +70,14 @@ router.post('/', userControllers.createUser);
  * @swagger
  * /api/users/{id}:
  *   put:
- *     summary: Actualizar un usuario existente
+ *     summary: Actualizar usuario existente
  *     tags: [User]
  *     parameters:
  *       - in: path
  *         name: id
+ *         required: true
  *         schema:
  *           type: integer
- *         required: true
  *         description: ID del usuario a actualizar
  *     requestBody:
  *       required: true
@@ -110,16 +98,7 @@ router.post('/', userControllers.createUser);
  *         content:
  *           application/json:
  *             schema:
- *               type: object
- *               properties:
- *                 success:
- *                   type: boolean
- *                   example: true
- *                 data:
- *                   $ref: '#/components/schemas/User'
- *                 message:
- *                   type: string
- *                   example: Usuario actualizado correctamente
+ *               $ref: '#/components/schemas/User'
  *       400:
  *         description: Datos de entrada inválidos
  *       404:
@@ -138,24 +117,13 @@ router.put('/:id', userControllers.updateUser);
  *     parameters:
  *       - in: path
  *         name: id
+ *         required: true
  *         schema:
  *           type: integer
- *         required: true
  *         description: ID del usuario a eliminar
  *     responses:
  *       200:
  *         description: Usuario eliminado correctamente
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 success:
- *                   type: boolean
- *                   example: true
- *                 message:
- *                   type: string
- *                   example: Usuario eliminado correctamente
  *       404:
  *         description: Usuario no encontrado
  *       500:

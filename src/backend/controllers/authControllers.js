@@ -8,15 +8,15 @@ export const authControllers = {
             const result = await authServices.registerUser({email, name, password});
 
             res.status(201).json({
-                success: true,
+                succes: true,
                 message: "Usuario registrado correctamente",
                 data: result
             });
         }catch(error){
             res.status(500).json({
-                success: false,
+                succes: false,
                 message: error.message
             });
         }
     }
-}
+};

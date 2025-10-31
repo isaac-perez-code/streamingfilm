@@ -2,9 +2,10 @@ import express from 'express';
 import { registerUser} from '../controllers/emailControllers.js';
 
 const router = express.Router();
+
 /**
  * @swagger
- * /api/auth/register:
+ * /api/email/register:
  *  post:
  *    summary: REGISTRAR NUEVO USUARIO Y ENVIAR
  *    tags: [Email]
@@ -27,7 +28,6 @@ const router = express.Router();
  *    500:
  *      description: Error del servicio al enviar Email
  */
-
 router.post('/register', registerUser)
 
 export default router;

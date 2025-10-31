@@ -1,4 +1,3 @@
-
 import {PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient;
@@ -25,56 +24,25 @@ export const userService ={
         }
     },
 
-    //Actualizar usuarios
-    async updateUser(id, data){
-        try{
-            const user = await prisma.user.findUnique({
-                where: { id: parseInt(id) }
-            });
-            
-            if (!user) {
-                throw new Error('Usuario no encontrado');
-            }
-
-            // Si se intenta actualizar el email, verificar unicidad
-            if (data.email) {
-                const existing = await prisma.user.findUnique({
-                    where: { email: data.email }
-                });
-
-                if (existing && existing.id !== parseInt(id)) {
-                    // Simular el código de error de Prisma para que el controlador lo trate como conflicto
-                    const err = new Error('Unique constraint failed on the fields: (`email`)');
-                    err.code = 'P2002';
-                    throw err;
-                }
-            }
-
+    async updateUser(id, data) {
+        try {
             return await prisma.user.update({
                 where: { id: parseInt(id) },
                 data: data
             });
-        }catch(error){
-            const err = new Error('Error al actualizar usuario: ' + error.message);
-            if (error.code) err.code = error.code;
-            throw err;
+        } catch (error) {
+            throw new Error('Error al actualizar usuario: ' + error.message);
         }
     },
 
-    //Eliminar usuarios
-    async deleteUser(id){
-        try{
-            const user = await prisma.user.findUnique({
+    // Eliminar usuario
+    async deleteUser(id) {
+        try {
+            return await prisma.user.delete({
                 where: { id: parseInt(id) }
             });
-            if (!user) {
-                throw new Error('Usuario no encontrado');
-            }
-            await prisma.user.delete({
-                where: { id: parseInt(id) }
-            });
-        }catch(error){
+        } catch (error) {
             throw new Error('Error al eliminar usuario: ' + error.message);
         }
     }
-};
+}

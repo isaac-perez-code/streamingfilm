@@ -2,7 +2,8 @@ import swaggerJsdoc from "swagger-jsdoc";
 const swaggerOptions = {
   definition: {
     openapi: "3.0.0",
-    info: { title: "API REST - Proyect streamingfilm",
+    info: { 
+      title: "API REST - Proyect streamingfilm",
     version: "1.0.0",
     description: "Documentación de API REST con Express, Prisma y Postman.",
     contact:{

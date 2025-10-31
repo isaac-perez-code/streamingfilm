@@ -1,7 +1,7 @@
 import { PrismaClient } from "@prisma/client";
 import { hashPassword, comparePassword, generateToken } from "../utils/auth.js";
 
-const prisma = new PrismaClient;
+const prisma = new PrismaClient();
 
 export const authServices = {
     //Registrar usuario
@@ -9,8 +9,8 @@ export const authServices = {
         try {
             const {email, name, password} = data;
             const hashedPassword = await hashPassword(password);
-            const user = await prisma.user.create ({
-                data:{email, name, password: hashedPassword},
+            const user = await prisma.user.create({
+                data:{ email, name, password: hashedPassword },
             });
 
             //Enviar token
@@ -22,7 +22,8 @@ export const authServices = {
                 user: userwithoutPassword,
                 token,
             }
-        } catch(error){
-            throw new Error("Error al registrar usuario" + error)};
+        } catch (error) {
+            throw new Error("Error al registrar usuario" + error);
         }
-    };
+    },
+};

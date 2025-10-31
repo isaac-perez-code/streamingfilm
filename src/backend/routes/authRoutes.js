@@ -1,5 +1,7 @@
 import express from 'express';
 import { authControllers } from '../controllers/authControllers.js';
+//import { autenticate } from "../middlewares/authMiddlewares.js"
+
 const router = express.Router();
 
 /**
@@ -42,6 +44,6 @@ const router = express.Router();
  *      500:
  *        description: Error interno del sistema
  */
-        router.post('/register', authControllers.register)
+router.post('/register', authControllers.register)
 
 export default router;
