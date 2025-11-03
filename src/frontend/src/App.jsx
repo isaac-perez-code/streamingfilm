@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import LoginSuccess from "./pages/LoginSuccess";
 import Home from "./pages/Home";
 
 function App() {
