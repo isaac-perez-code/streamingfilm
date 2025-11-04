@@ -1,9 +1,8 @@
-import express from 'express';
-import { authControllers } from '../controllers/authControllers.js';
-//import { autenticate } from "../middlewares/authMiddlewares.js"
+import express from "express";
+import { authControllers } from "../controllers/authControllers.js";
+import passport from "passport";
 
 const router = express.Router();
-
 /**
  * @swagger 
  * components:
@@ -44,13 +43,21 @@ const router = express.Router();
  *      500:
  *        description: Error interno del sistema
  */
-router.post('/register', authControllers.register)
+router.post("/register", authControllers.register);
 
-router.get("/google/callback", passport.authenticate("google", {
-    failureRedirect: "http://localhost:5173/login-error"
-}),
-authControllers.googleCallback
+router.get(
+  "/google",
+  passport.authenticate("google", {
+    scope: ["profile", "email"], 
+  })
 );
 
+router.get(
+  "/google/callback",
+  passport.authenticate("google", {
+    failureRedirect: "http://localhost:5173/login-error",
+  }),
+  authControllers.googleCallBack
+);
 
 export default router;
