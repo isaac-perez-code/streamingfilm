@@ -1,47 +1,46 @@
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import MovieCard from "../components/MovieCard";
+import { fetcher } from "../api/tmdb";
 
-function Home() {
-  const [token, setToken] = useState(null);
+export default function Home() {
+  const [trending, setTrending] = useState([]);
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
-    const storedToken = localStorage.getItem("authToken");
-    if (storedToken) {
-      setToken(storedToken);
-    }
-  },
-    []);
+    fetcher("/trending/movie/week").then(data => {
+      setTrending(data.results.slice(0, 12));
+      setLoading(false);
+    });
+  }, []);
 
-  const handleLogout = () => {
-    localStorage.removeItem("authToken");
-    setToken(null);
-  };
+  if (loading) return <div className="text-white text-center mt-20">Cargando...</div>;
 
   return (
-    <div className="min-h-screen bg-gray-100 p-8">
-      <h1 className="text-2xl font-bold mb-4">Bienvenido a mi pagina 🏡</h1>
-      {token && (
-        <button
-          onClick={handleLogout}
-          className="px-4 py-2 text-white bg-orange-500 rounded hover:bg-orange-600"
-        >
-          Cerrar Sesion
-        </button>
-      )}
-      {token ? (
-        <div>
-          <p className="text-green-600 text-xl">Haz iniciado exitosamente</p>
+    <div className="min-h-screen bg-gray-900 text-white pb-20">
+      <header className="relative">
+        <img
+          src="https://image.tmdb.org/t/p/original/8cdWjvZQUExUUTzyp4t6EDMUBj4.jpg"
+          alt="Hero"
+          className="w-full h-96 object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent" />
+        <div className="absolute bottom-10 left-10">
+          <h1 className="text-5xl font-bold">DUNE 2</h1>
+          <p className="text-xl mt-2">La saga continúa</p>
+          <button className="mt-4 bg-red-600 px-8 py-3 rounded-full font-bold hover:bg-red-700">
+            Reproducir
+          </button>
         </div>
-      ) : (
-        <div>
-          <p className="text-red-600 text-xl">
-            Parece que no haz iniciado sesion
-          </p>
-          <Link to="/login" className="mt-4 inline-block text-blue-500">
-            Ir a la pagina de Login
-          </Link>
+      </header>
+
+      <section className="max-w-7xl mx-auto px-4 mt-12">
+        <h2 className="text-3xl font-bold mb-6">Tendencias de la semana</h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+          {trending.map(movie => (
+            <MovieCard key={movie.id} movie={movie} />
+          ))}
         </div>
-      )}
+      </section>
     </div>
   );
 }
-export default Home;
